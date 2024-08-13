@@ -26,14 +26,14 @@ public class GetOrderUser {
     @Test
     @DisplayName("Получить заказы без авторизации")
     @Description("Заказы не отображаются в ответе")
-    public void getOrderUserWitoutAuth() {
+    public void getOrderUserWithoutAuth() {
         orderSteps.getOrderUser(401, "");
     }
 
     @Test
     @DisplayName("Получить заказы c авторизацией")
     @Description("Заказы отображаются в ответе")
-    public void getOrderUserWitAuth() {
+    public void getOrderUserWithAuth() {
         String token = userSteps.getToken(email, password);
         ingredients = orderSteps.getIngredients();
         orderSteps.createOrder(ingredients, 200, token);

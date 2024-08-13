@@ -13,7 +13,6 @@ public class CreateOrderTest {
     private String email = Credential.EMAIL;
     private String password = Credential.PASSWORD;
     private String name = Credential.NAME;
-    private String random = Credential.RANDOM;
     ArrayList<String> ingredients = new ArrayList<>();
 
     UserSteps userSteps = new UserSteps();

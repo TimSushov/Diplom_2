@@ -27,10 +27,16 @@ public class LoginUserTest {
     }
 
     @Test
-    @DisplayName("Логин пользователя с неверным логином и/или паролем")
+    @DisplayName("Логин пользователя с неверным логином")
     @Description("Авторизация не происходит")
-    public void loginUserWitWrongPassworLogin() {
+    public void loginUserWitWrongLogin() {
         userSteps.loginUser(email + random, password, 401);
+    }
+
+    @Test
+    @DisplayName("Логин пользователя с неверным паролем")
+    @Description("Авторизация не происходит")
+    public void loginUserWitWrongPassword() {
         userSteps.loginUser(email, password + random, 401);
     }
 
